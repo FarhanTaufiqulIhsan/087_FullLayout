@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">weatherapp</string>
+    <string name="title">WEATHER APP</string>
+    <string name="cuaca">hujan</string>
+</resources>
