@@ -57,7 +57,7 @@ Column(horizontalAlignment = Alignment.CenterHorizontally,
             .padding(bottom = 20.dp, top = 20.dp)
     )
     cuaca()
-    Spacer(modifier = modifier.padding(13.dp))
+    Spacer(modifier = modifier.padding(2.dp))
     suhutempat()
     Spacer(modifier = modifier.padding(13.dp))
     keterangan()
@@ -99,7 +99,7 @@ fun suhutempat(){
             Spacer(modifier = Modifier.padding(3.dp))
 
             Text(text =  "Yogyakarta",
-                fontSize = 50.sp,
+                fontSize = 35.sp,
                 fontWeight = FontWeight.Bold)
         }
         Spacer(modifier = Modifier.padding(13.dp))
@@ -117,16 +117,47 @@ fun keterangan(){
         .clip(RoundedCornerShape(25.dp))
         .background(color = Color.Cyan)
         .width(width = 350.dp)
-        .height(height = 190.dp)) {
-        Row(horizontalArrangement = Arrangement.Center,
-        modifier = Modifier) {
-                Column {
-                    Text("coba 1")
-                    Text(text = "Coba 2")
-                }
-                Column {
-                    Text(text = "Coba 1")
-                    Text(text = "Coba 2")
+        .height(height = 190.dp),
+    contentAlignment = Alignment.Center) {
+        Row(modifier = Modifier.fillMaxWidth()
+            .padding(25.dp),
+                horizontalArrangement = Arrangement.SpaceBetween) {
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = "Humidity")
+                Text(
+                    text = "98%",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 23.sp)
+
+                Spacer(modifier = Modifier.padding(10.dp))
+
+                Text(
+                    text = "Sunrise")
+                Text(
+                    text = "05.00 AM",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 23.sp)
+            }
+
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally) {
+                Text(
+                    text = "UV Index")
+                Text(
+                    text = "9 / 10",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 23.sp)
+
+                Spacer(modifier = Modifier.padding(10.dp))
+
+                Text(
+                    text = "Sunset")
+                Text(
+                    text = "05.40 PM",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 23.sp)
             }
         }
     }
